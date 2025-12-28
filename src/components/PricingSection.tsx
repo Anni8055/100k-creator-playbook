@@ -102,17 +102,17 @@ const PricingSection = () => {
                 </Button>
 
                 {/* Trust badges */}
-                <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm text-muted-foreground">
+                <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 mt-6 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1.5">
-                    <Download className="w-4 h-4" />
+                    <Download className="w-4 h-4 text-primary" />
                     <span>Instant Download</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <Zap className="w-4 h-4" />
+                    <Zap className="w-4 h-4 text-primary" />
                     <span>PDF + Canva + Docs</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <RefreshCw className="w-4 h-4" />
+                    <RefreshCw className="w-4 h-4 text-primary" />
                     <span>Free Updates</span>
                   </div>
                 </div>

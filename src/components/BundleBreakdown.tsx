@@ -128,12 +128,14 @@ const BundleBreakdown = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 text-center"
+          className="mt-8 sm:mt-12 text-center"
         >
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary/10 text-primary font-semibold">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 rounded-2xl sm:rounded-full bg-primary/20 text-primary font-semibold">
             <span>Total Bundle Value:</span>
-            <span className="line-through text-muted-foreground">₹4,999</span>
-            <span className="text-xl">Get it for just ₹999</span>
+            <div className="flex items-center gap-2">
+              <span className="line-through text-muted-foreground">₹4,999</span>
+              <span className="text-lg sm:text-xl">Get it for just ₹999</span>
+            </div>
           </div>
         </motion.div>
       </div>

@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { Star, TrendingUp, Eye, Users } from "lucide-react";
+import analyticsFollowers from "@/assets/analytics-followers.png";
+import analyticsReels from "@/assets/analytics-reels.png";
+import analyticsEngagement from "@/assets/analytics-engagement.png";
 
 const stats = [
   { icon: Users, value: "50K+", label: "Followers Gained" },
@@ -90,7 +93,7 @@ const ProofSection = () => {
           ))}
         </motion.div>
 
-        {/* Screenshots placeholder */}
+        {/* Screenshots */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -99,20 +102,27 @@ const ProofSection = () => {
           className="mb-16"
         >
           <div className="grid sm:grid-cols-3 gap-4">
-            {["Follower Growth Screenshot", "Reel Views Analytics", "Engagement Insights"].map((label, index) => (
-              <div
-                key={index}
-                className="card-elevated aspect-video flex items-center justify-center bg-gradient-to-br from-primary/5 to-primary/10 border-dashed border-2 border-primary/30"
-              >
-                <div className="text-center p-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                    <TrendingUp className="w-6 h-6 text-primary" />
-                  </div>
-                  <p className="text-sm text-muted-foreground">{label}</p>
-                  <p className="text-xs text-muted-foreground mt-1">Add your screenshot here</p>
-                </div>
-              </div>
-            ))}
+            <div className="card-elevated overflow-hidden rounded-xl">
+              <img 
+                src={analyticsFollowers} 
+                alt="Follower Growth Analytics" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="card-elevated overflow-hidden rounded-xl">
+              <img 
+                src={analyticsReels} 
+                alt="Reel Views Analytics" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="card-elevated overflow-hidden rounded-xl">
+              <img 
+                src={analyticsEngagement} 
+                alt="Engagement Insights" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
         </motion.div>
 

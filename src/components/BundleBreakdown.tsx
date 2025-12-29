@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { BookOpen, Film, FileText, Calendar, MessageSquare, Check } from "lucide-react";
+import reelTemplates from "@/assets/reel-templates.png";
 
 const bundleItems = [
   {
@@ -121,6 +122,24 @@ const BundleBreakdown = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Templates Preview */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-12"
+        >
+          <div className="card-elevated p-4 sm:p-6 rounded-2xl overflow-hidden max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground text-center mb-4">Preview: High-Graphics Reel Templates</p>
+            <img 
+              src={reelTemplates} 
+              alt="Reel Templates Preview" 
+              className="w-full h-auto rounded-xl"
+            />
+          </div>
+        </motion.div>
 
         {/* Total Value */}
         <motion.div

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import ebookMockup from "@/assets/ebook-mockup.png";
+import phoneReel from "@/assets/phone-reel.png";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -112,42 +114,25 @@ const Hero = () => {
               {/* Main mockup container */}
               <div className="relative">
                 {/* Ebook mockup */}
-                <div className="relative z-10 bg-gradient-to-br from-primary to-primary/80 rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
-                  <div className="bg-background rounded-xl sm:rounded-2xl p-4 sm:p-6 space-y-3 sm:space-y-4">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
-                      <span className="text-xl sm:text-2xl font-bold gradient-text">0K</span>
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-bold">0-100K Followers Playbook</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      The complete system to grow your Instagram from scratch
-                    </p>
-                    <div className="flex flex-wrap gap-2 pt-2">
-                      <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-medium">
-                        PDF Guide
-                      </span>
-                      <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-medium">
-                        Templates
-                      </span>
-                    </div>
-                  </div>
+                <div className="relative z-10 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+                  <img 
+                    src={ebookMockup} 
+                    alt="0-100K Followers Playbook Ebook" 
+                    className="w-full h-auto max-w-xs sm:max-w-sm mx-auto"
+                  />
                 </div>
 
-                {/* Floating phone mockup - hidden on very small screens */}
+                {/* Floating phone mockup */}
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute -right-4 sm:-right-8 top-1/4 z-20 hidden sm:block"
                 >
-                  <div className="w-24 sm:w-32 h-40 sm:h-56 bg-foreground rounded-2xl sm:rounded-3xl p-1 shadow-xl">
-                    <div className="w-full h-full bg-gradient-to-b from-primary/30 to-primary/10 rounded-xl sm:rounded-[20px] flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-8 sm:w-10 h-8 sm:h-10 mx-auto rounded-full bg-primary/30 flex items-center justify-center mb-2">
-                          <Play className="w-3 sm:w-4 h-3 sm:h-4 text-primary" />
-                        </div>
-                        <span className="text-xs font-medium text-background">Reels</span>
-                      </div>
-                    </div>
-                  </div>
+                  <img 
+                    src={phoneReel} 
+                    alt="Instagram Reel Preview" 
+                    className="w-24 sm:w-36 h-auto rounded-2xl shadow-xl"
+                  />
                 </motion.div>
 
                 {/* Floating stats card - adjusted for mobile */}

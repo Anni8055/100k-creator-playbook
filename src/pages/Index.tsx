@@ -9,10 +9,12 @@ import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import UrgencyBanner from "@/components/UrgencyBanner";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <UrgencyBanner />
       <Navbar />
       <main>
         <Hero />
